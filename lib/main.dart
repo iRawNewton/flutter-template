@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_folder_structure/dev/screens/test_screen.dart';
 import 'package:flutter_folder_structure/res/colors.dart';
 import 'package:flutter_folder_structure/res/dimens.dart';
+import 'package:flutter_folder_structure/res/routes.dart';
 
 import 'dev/ui_global/buttons.dart';
 
@@ -27,6 +28,12 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: MyTestScreen(),
+      routes: routes,
+      initialRoute: '/MyTestScreen',
+      onGenerateRoute: (RouteSettings settings) {
+        // Handle unknown routes
+        return MaterialPageRoute(builder: (context) => MyTestScreen());
+      },
     );
   }
 }
@@ -61,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               const Text(
                 'You have pushed the button this many times:',
-                style: TextStyle(color: AppColors.textColor),
+                style: TextStyle(color: CustomColors.textColor),
               ),
               Text(
                 '$_counter',
