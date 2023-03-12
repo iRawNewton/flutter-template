@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folder_structure/dev/ui_global/buttons.dart';
+import 'package:flutter_folder_structure/dev/screens/test_screen.dart';
 import 'package:flutter_folder_structure/res/colors.dart';
 import 'package:flutter_folder_structure/res/dimens.dart';
+
+import 'dev/ui_global/buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,9 +23,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.amber.shade200,
         ),
         useMaterial3: true,
-        colorSchemeSeed: Colors.amber,
+        colorSchemeSeed: Colors.red,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyTestScreen(),
     );
   }
 }
@@ -74,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-        floatingActionButton: MyAppButtons(
+        floatingActionButton: MyCustomButtons(
           onPressed: _incrementCounter,
           icon: Icons.abc,
         ) // This trailing comma makes auto-formatting nicer for build methods.

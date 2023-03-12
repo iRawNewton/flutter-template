@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyAppButtons extends StatelessWidget {
+class MyCustomButtons extends StatelessWidget {
   final dynamic onPressed;
   final IconData icon;
-  const MyAppButtons({super.key, required this.onPressed, required this.icon});
+  const MyCustomButtons(
+      {super.key, required this.onPressed, required this.icon});
 
   @override
   Widget build(BuildContext context) {
